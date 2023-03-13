@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "dat-to-zarr"
+version = "0.1.0"
+description = "Converts .dat to .zarr"
+authors = ["Mary Lay <laym@janelia.hhmi.org>, Davis Bennett <bennettd@janelia.hhmi.org>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "dat_to_zarr"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+zarr = "^2.14.2"
+fibsem-tools = "^1.2.2"
+pathlib = "^1.0.1"
+numcodecs = "^0.11.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
