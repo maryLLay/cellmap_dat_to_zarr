@@ -6,10 +6,10 @@ import dask.bag as db
 import os
 
 
-source_path = r'\\dm11.hhmi.org\projtechres$\laym\Documents\CellMap\jrc_hela2_raw_testData'
+source_path = r'path/to/input/with/1/or/more/dat/files'
 
 
-container_path = r'\\dm11.hhmi.org\projtechres$\laym\Documents\CellMap\output_test'
+container_path = r'path/to/output'
 
 def dat_to_zarr(parent_path,
                 group_path,
