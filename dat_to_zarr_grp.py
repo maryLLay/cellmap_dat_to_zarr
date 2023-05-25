@@ -1,15 +1,15 @@
 from pathlib import Path
-from fibsem_tools.io import read
+from fibsem_tools.io.core import read
 import zarr
 from numcodecs import GZip
 import dask.bag as db
 import os
 
 
-source_path = r'path/to/input/with/1/or/more/dat/files'
+source_path = r'/path/to/dat/files'
 
 
-container_path = r'path/to/output'
+container_path = r'/path/to/output/location'
 
 def dat_to_zarr(parent_path,
                 group_path,

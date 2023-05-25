@@ -10,9 +10,10 @@ packages = [{include = "dat_to_zarr"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 zarr = "^2.14.2"
-fibsem-tools = "^1.2.2"
+fibsem-tools = "2.0.0"
 pathlib = "^1.0.1"
 numcodecs = "^0.11.0"
+tifffile = "^2023.4.12"
 
 
 [build-system]
