@@ -15,6 +15,31 @@ def dat_to_zarr(parent_path,
                 group_path,
                 chunks=(2048, 2048, 1),
                 compressor=GZip(level=-1)):
+     '''
+    dat_to_zarr accepts a .dat file and a path, and returns the path to a zarr array
+
+    
+    Parameters
+    ---------- 
+    parent_path : path to .dat file
+
+    group_path : path to zarr group where resulting zarr array will be stored
+
+    chunks : 1x3 tuple
+        denotes the size of the chunks for a 3D array of data
+
+    
+    Returns
+    -------
+    path to a zarr array if successful
+
+    '''
+
+    #Questions for future:
+        #What if .dat is not 3D array?
+        #What if user wants to pick different compressor?  How to support other compressors?
+
+
     dat = read(parent_path)
     name = Path(parent_path).stem
     new_array = zarr.open(store=group_path,
